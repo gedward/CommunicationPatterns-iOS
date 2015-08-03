@@ -8,6 +8,7 @@
 
 #import "ChangeColorBlockViewController.h"
 #import "ChangeColorDelegationViewController.h"
+#import "ChangeColorNotificationViewController.h"
 #import "ViewController.h"
 
 @implementation ViewController
@@ -17,10 +18,16 @@
     
     self.title = @"Communication Patterns";
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"CommunicationPatternCell"];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didReceiveNotification:) name:@"ChangeColorNotification" object:nil];
+}
+
+- (void)didReceiveNotification:(NSNotification *)note {
+    self.tableView.backgroundColor = note.userInfo[@"color"];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 2;
+    return 3;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -30,6 +37,8 @@
         cell.textLabel.text = @"Delegation";
     } else if (indexPath.row == 1) {
         cell.textLabel.text = @"Blocks";
+    } else if (indexPath.row == 2) {
+        cell.textLabel.text = @"Notification";
     }
     
     return cell;
@@ -48,6 +57,9 @@
         };
         
         [self.navigationController pushViewController:changeColorBlockVC animated:YES];
+    } else if (indexPath.row == 2) {
+        ChangeColorNotificationViewController *changeColorNotificationVC = [[ChangeColorNotificationViewController alloc] init];
+        [self.navigationController pushViewController:changeColorNotificationVC animated:YES];
     }
 }
 

@@ -15,6 +15,7 @@
 		544FCD671B6F01CA0023F858 /* communicationPatternsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 544FCD661B6F01CA0023F858 /* communicationPatternsTests.m */; };
 		544FCD721B6F04250023F858 /* ChangeColorDelegationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 544FCD711B6F04250023F858 /* ChangeColorDelegationViewController.m */; };
 		544FCD761B6F09BB0023F858 /* ChangeColorBlockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 544FCD751B6F09BB0023F858 /* ChangeColorBlockViewController.m */; };
+		544FCD791B6F0D6D0023F858 /* ChangeColorNotificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 544FCD781B6F0D6D0023F858 /* ChangeColorNotificationViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,8 @@
 		544FCD731B6F070E0023F858 /* ChangeColorDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangeColorDelegate.h; sourceTree = "<group>"; };
 		544FCD741B6F09BB0023F858 /* ChangeColorBlockViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangeColorBlockViewController.h; sourceTree = "<group>"; };
 		544FCD751B6F09BB0023F858 /* ChangeColorBlockViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangeColorBlockViewController.m; sourceTree = "<group>"; };
+		544FCD771B6F0D6D0023F858 /* ChangeColorNotificationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangeColorNotificationViewController.h; sourceTree = "<group>"; };
+		544FCD781B6F0D6D0023F858 /* ChangeColorNotificationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangeColorNotificationViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,13 +91,15 @@
 			children = (
 				544FCD4E1B6F01CA0023F858 /* AppDelegate.h */,
 				544FCD4F1B6F01CA0023F858 /* AppDelegate.m */,
-				544FCD701B6F04250023F858 /* ChangeColorDelegationViewController.h */,
-				544FCD711B6F04250023F858 /* ChangeColorDelegationViewController.m */,
 				544FCD741B6F09BB0023F858 /* ChangeColorBlockViewController.h */,
 				544FCD751B6F09BB0023F858 /* ChangeColorBlockViewController.m */,
+				544FCD731B6F070E0023F858 /* ChangeColorDelegate.h */,
+				544FCD701B6F04250023F858 /* ChangeColorDelegationViewController.h */,
+				544FCD711B6F04250023F858 /* ChangeColorDelegationViewController.m */,
+				544FCD771B6F0D6D0023F858 /* ChangeColorNotificationViewController.h */,
+				544FCD781B6F0D6D0023F858 /* ChangeColorNotificationViewController.m */,
 				544FCD511B6F01CA0023F858 /* ViewController.h */,
 				544FCD521B6F01CA0023F858 /* ViewController.m */,
-				544FCD731B6F070E0023F858 /* ChangeColorDelegate.h */,
 				544FCD571B6F01CA0023F858 /* Images.xcassets */,
 				544FCD591B6F01CA0023F858 /* LaunchScreen.xib */,
 				544FCD4A1B6F01CA0023F858 /* Supporting Files */,
@@ -230,6 +235,7 @@
 				544FCD531B6F01CA0023F858 /* ViewController.m in Sources */,
 				544FCD501B6F01CA0023F858 /* AppDelegate.m in Sources */,
 				544FCD721B6F04250023F858 /* ChangeColorDelegationViewController.m in Sources */,
+				544FCD791B6F0D6D0023F858 /* ChangeColorNotificationViewController.m in Sources */,
 				544FCD761B6F09BB0023F858 /* ChangeColorBlockViewController.m in Sources */,
 				544FCD4D1B6F01CA0023F858 /* main.m in Sources */,
 			);
