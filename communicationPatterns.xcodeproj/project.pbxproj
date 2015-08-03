@@ -16,6 +16,7 @@
 		544FCD721B6F04250023F858 /* ChangeColorDelegationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 544FCD711B6F04250023F858 /* ChangeColorDelegationViewController.m */; };
 		544FCD761B6F09BB0023F858 /* ChangeColorBlockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 544FCD751B6F09BB0023F858 /* ChangeColorBlockViewController.m */; };
 		544FCD791B6F0D6D0023F858 /* ChangeColorNotificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 544FCD781B6F0D6D0023F858 /* ChangeColorNotificationViewController.m */; };
+		544FCD7C1B6F0FCE0023F858 /* ChangeColorKVOTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 544FCD7B1B6F0FCE0023F858 /* ChangeColorKVOTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,8 @@
 		544FCD751B6F09BB0023F858 /* ChangeColorBlockViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangeColorBlockViewController.m; sourceTree = "<group>"; };
 		544FCD771B6F0D6D0023F858 /* ChangeColorNotificationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangeColorNotificationViewController.h; sourceTree = "<group>"; };
 		544FCD781B6F0D6D0023F858 /* ChangeColorNotificationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangeColorNotificationViewController.m; sourceTree = "<group>"; };
+		544FCD7A1B6F0FCE0023F858 /* ChangeColorKVOTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangeColorKVOTableViewController.h; sourceTree = "<group>"; };
+		544FCD7B1B6F0FCE0023F858 /* ChangeColorKVOTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangeColorKVOTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +99,8 @@
 				544FCD731B6F070E0023F858 /* ChangeColorDelegate.h */,
 				544FCD701B6F04250023F858 /* ChangeColorDelegationViewController.h */,
 				544FCD711B6F04250023F858 /* ChangeColorDelegationViewController.m */,
+				544FCD7A1B6F0FCE0023F858 /* ChangeColorKVOTableViewController.h */,
+				544FCD7B1B6F0FCE0023F858 /* ChangeColorKVOTableViewController.m */,
 				544FCD771B6F0D6D0023F858 /* ChangeColorNotificationViewController.h */,
 				544FCD781B6F0D6D0023F858 /* ChangeColorNotificationViewController.m */,
 				544FCD511B6F01CA0023F858 /* ViewController.h */,
@@ -236,6 +241,7 @@
 				544FCD501B6F01CA0023F858 /* AppDelegate.m in Sources */,
 				544FCD721B6F04250023F858 /* ChangeColorDelegationViewController.m in Sources */,
 				544FCD791B6F0D6D0023F858 /* ChangeColorNotificationViewController.m in Sources */,
+				544FCD7C1B6F0FCE0023F858 /* ChangeColorKVOTableViewController.m in Sources */,
 				544FCD761B6F09BB0023F858 /* ChangeColorBlockViewController.m in Sources */,
 				544FCD4D1B6F01CA0023F858 /* main.m in Sources */,
 			);

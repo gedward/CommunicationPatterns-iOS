@@ -1,19 +1,23 @@
 //
-//  ChangeColorViewController.m
+//  ChangeColorKVOTableViewController.m
 //  communicationPatterns
 //
 //  Created by Gerard Gonzalez on 8/2/15.
 //  Copyright (c) 2015 Gerard Gonzalez. All rights reserved.
 //
 
-#import "ChangeColorDelegationViewController.h"
+#import "ChangeColorKVOTableViewController.h"
 
-@implementation ChangeColorDelegationViewController
+@interface ChangeColorKVOTableViewController ()
+
+@end
+
+@implementation ChangeColorKVOTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = @"Delegation";
+    self.title = @"KVO";
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"ColorCell"];
 }
 
@@ -35,12 +39,11 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.row == 0) {
-        [self.delegate changeColor:[UIColor blueColor]];
+        self.selectedColor = [UIColor blueColor];
     } else {
-        [self.delegate changeColor:[UIColor redColor]];
+        self.selectedColor = [UIColor redColor];
     }
     [self.navigationController popViewControllerAnimated:YES];
 }
-
 
 @end

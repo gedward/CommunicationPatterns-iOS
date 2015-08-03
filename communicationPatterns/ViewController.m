@@ -8,6 +8,7 @@
 
 #import "ChangeColorBlockViewController.h"
 #import "ChangeColorDelegationViewController.h"
+#import "ChangeColorKVOTableViewController.h"
 #import "ChangeColorNotificationViewController.h"
 #import "ViewController.h"
 
@@ -27,7 +28,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 3;
+    return 4;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -39,6 +40,8 @@
         cell.textLabel.text = @"Blocks";
     } else if (indexPath.row == 2) {
         cell.textLabel.text = @"Notification";
+    } else if (indexPath.row == 3) {
+        cell.textLabel.text = @"Key-Value Observation";
     }
     
     return cell;
@@ -60,11 +63,24 @@
     } else if (indexPath.row == 2) {
         ChangeColorNotificationViewController *changeColorNotificationVC = [[ChangeColorNotificationViewController alloc] init];
         [self.navigationController pushViewController:changeColorNotificationVC animated:YES];
+    } else if (indexPath.row == 3) {
+        ChangeColorKVOTableViewController *changeColorKVOVC = [[ChangeColorKVOTableViewController alloc] init];
+
+        [changeColorKVOVC addObserver:self forKeyPath:@"selectedColor" options:0 context:nil];
+        
+        [self.navigationController pushViewController:changeColorKVOVC animated:YES];
     }
 }
 
 - (void)changeColor:(UIColor *)color {
     self.tableView.backgroundColor = color;
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
+    if ([keyPath isEqualToString:@"selectedColor"]) {
+        self.tableView.backgroundColor = [object valueForKeyPath:keyPath];
+        [object removeObserver:self forKeyPath:@"selectedColor"];
+    }
 }
 
 @end
