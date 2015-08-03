@@ -1,19 +1,23 @@
 //
-//  ChangeColorViewController.m
+//  ChangeColorBlockViewController.m
 //  communicationPatterns
 //
 //  Created by Gerard Gonzalez on 8/2/15.
 //  Copyright (c) 2015 Gerard Gonzalez. All rights reserved.
 //
 
-#import "ChangeColorDelegationViewController.h"
+#import "ChangeColorBlockViewController.h"
 
-@implementation ChangeColorDelegationViewController
+@interface ChangeColorBlockViewController ()
+
+@end
+
+@implementation ChangeColorBlockViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = @"Delegation";
+    self.title = @"Blocks";
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"ColorCell"];
 }
 
@@ -35,11 +39,12 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.row == 0) {
-        [self.delegate changeColor:[UIColor blueColor]];
+        self.changeColorBlock([UIColor blueColor]);
     } else {
-        [self.delegate changeColor:[UIColor redColor]];
+        self.changeColorBlock([UIColor redColor]);
     }
     [self.navigationController popViewControllerAnimated:YES];
 }
+
 
 @end

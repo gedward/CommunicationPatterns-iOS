@@ -6,12 +6,9 @@
 //  Copyright (c) 2015 Gerard Gonzalez. All rights reserved.
 //
 
+#import "ChangeColorBlockViewController.h"
 #import "ChangeColorDelegationViewController.h"
 #import "ViewController.h"
-
-@interface ViewController ()
-
-@end
 
 @implementation ViewController
 
@@ -23,22 +20,34 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 1;
+    return 2;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CommunicationPatternCell" forIndexPath:indexPath];
     
-    cell.textLabel.text = @"Delegation";
+    if (indexPath.row == 0) {
+        cell.textLabel.text = @"Delegation";
+    } else if (indexPath.row == 1) {
+        cell.textLabel.text = @"Blocks";
+    }
     
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.row == 0) {
-        ChangeColorDelegationViewController *changeColorVC = [[ChangeColorDelegationViewController alloc] init];
-        changeColorVC.delegate = self;
-        [self.navigationController pushViewController:changeColorVC animated:YES];
+        ChangeColorDelegationViewController *changeColorDelegationVC = [[ChangeColorDelegationViewController alloc] init];
+        changeColorDelegationVC.delegate = self;
+        [self.navigationController pushViewController:changeColorDelegationVC animated:YES];
+    } else if (indexPath.row == 1) {
+        ChangeColorBlockViewController *changeColorBlockVC = [[ChangeColorBlockViewController alloc] init];
+        
+        changeColorBlockVC.changeColorBlock = ^(UIColor *color) {
+            self.tableView.backgroundColor = color;
+        };
+        
+        [self.navigationController pushViewController:changeColorBlockVC animated:YES];
     }
 }
 
